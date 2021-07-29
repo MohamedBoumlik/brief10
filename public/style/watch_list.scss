@@ -1,0 +1,142 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+
+}
+
+body{
+
+    // -------------------------------nav
+
+    nav{
+      
+
+        // img{
+
+        //     float: left;
+        //     width: 140px;
+        //     height: 100px;
+        //     border-radius: 10%;
+
+        // }
+        
+        ul{
+            
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+
+        }
+
+        .nav-link{
+            color: #2C3440;
+            font-size: 20px;
+        }
+ 
+    }
+
+    h1{
+        color: #2C3440;
+        font-weight:bold ;
+        text-decoration: underline;
+    }
+
+    #btn{
+        background-color: #2C3440;
+        color:#CCD7DA;
+    }
+
+// ---------------
+    #more{
+        // display: flex;
+
+        a{
+            float: right;
+        }
+
+        h4{
+            color: #2C3440;
+        }
+
+        hr{
+            height: 2px;
+            background:#2C3440;
+        }
+
+    }
+
+// ------------------- lists -------------------
+
+    .container{
+
+        .card-body{
+            margin: auto;
+        }
+
+        .card{
+            background-color: #2C3440;
+            color: #CCD7DA;
+        }
+
+        hr{
+            height: 2px;
+            background:#2C3440;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    }
+    // .y{
+    //     margin: 0 auto;
+    //     margin-right: 6vw;
+    //     margin-bottom: 8vh;
+
+
+    //     .list{
+
+    //         img{
+    //             width: 13rem;
+    //             margin-right: -6vw;
+    //         }
+    //         #1{
+    //             z-index: 3;
+    //         }
+    //         #2{
+    //             z-index:2;
+    //         }
+    //         #3{
+    //             z-index: 1;
+    //         }
+    //         #4{
+    //             z-index: 0;
+    //         }
+
+    //     }
+
+    //     #z{
+    //         max-width: 20rem;
+    //     }
+
+    // }
+// ------------------- footer -------------------
+
+    footer {
+        margin: 0 auto;
+        padding: 40px 70px;
+        background-color: #2C3440;
+        color: #dadada;
+        text-align: center;
+
+        h2{
+            text-decoration: underline;
+        }
+        i {
+            padding: 10px 10px;
+            font-size: 30px;
+        }
+    }
+}

@@ -25,3 +25,9 @@
     </div>
 
 @endsection
+
+{{-- style --}}
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('style/Home.css') }}">  
+@endsection

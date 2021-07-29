@@ -10,16 +10,16 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="row m-auto">
 
         @foreach ($films as $film)
             
 
-            <div class="col">
+            <div class="col-lg-3 sm-12">
                 
                 <a href="{{route('film.show',$film->id)}}">
 
-                    <div class="card" style="width: 13rem;">
+                    <div class="card m-auto" style="width: 13rem;">
                         
                         <img src="/../img/{{$film->image}}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -30,7 +30,9 @@
 
                 </a>
 
-                <a href="{{route('film.edit',$film->id)}}"><button class="btn btn-outline-info m-auto">edit</button></a> <form action="{{route('film.delete',$film->id)}}" method="POST"> @csrf @method('DELETE')<button class="btn btn-outline-danger m-auto">Delete</button></form> <a href="{{route('film.show',$film->id)}}"><button class="btn btn-outline-dark m-auto">show</button></a>
+                <div class="col ">
+                    <a href="{{route('film.edit',$film->id)}}"><button class="btn btn-outline-info m-auto">edit</button></a> <form action="{{route('film.delete',$film->id)}}" method="POST"> @csrf @method('DELETE')<button class="btn btn-outline-danger m-auto">Delete</button></form> <a href="{{route('film.show',$film->id)}}"><button class="btn btn-outline-dark m-auto">show</button></a>
+                </div>
 
             </div>       
     
@@ -39,4 +41,10 @@
     </div>
 </div>
 
+@endsection
+
+{{-- style --}}
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('style/Home.css') }}">  
 @endsection

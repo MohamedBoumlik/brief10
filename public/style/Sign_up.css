@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff63), to(#ffffff63)), url("../img/signup.jpg");
+  background: linear-gradient(#ffffff63, #ffffff63), url("../img/signup.jpg");
+  background-size: cover;
+}
+
+body #form {
+  width: 50%;
+  background-color: #2C3440;
+  margin: auto;
+  border: 0.5px solid #2C3440;
+  border-radius: 10px;
+  color: #CCD7DA;
+  font-size: 1.2rem;
+  margin-top: 11%;
+  padding: 60px;
+}
+
+body #form #emailHelp {
+  color: #CCD7DA;
+}
+
+body #form input[type=password], body #form input[type=email], body #form input[type=text] {
+  background-color: #CCD7DA;
+  color: #4E5C6E;
+  border-radius: 32px;
+}
+
+body #form #link {
+  float: right;
+  color: #CCD7DA;
+}
+/*# sourceMappingURL=Sign_up.css.map */

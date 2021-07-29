@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+
+}
+
+body{
+     
+    background-color:#CCD7DA ;
+    nav{
+      
+
+        // img{
+
+        //     float: left;
+        //     width: 140px;
+        //     height: 100px;
+        //     border-radius: 10%;
+
+        // }
+        
+        ul{
+            
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+
+        }
+
+        .nav-link{
+            color: #2C3440;
+            font-size: 20px;
+        }
+ 
+    }
+
+
+    .background {
+
+        img{
+        height: 94vh;
+        width: 100%;
+        object-fit: cover;
+
+        }
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .center {
+        text-align: center;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 10px;
+        position: absolute;
+
+        p {
+            color: #CCD7DA;
+        }
+
+        h1{
+            color: #CCD7DA;
+            font-weight: bold;
+
+        }
+    }
+
+    #h{
+        color: #2C3440;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    #table{
+        width: 90%;
+        margin-left: 5%;
+        background-color:#2C3440 ;
+
+        td{
+            vertical-align: middle;
+            text-align: center;
+            color:#CCD7DA ;
+        }
+
+        th{
+            vertical-align: middle;
+            text-align: center; 
+            color:#CCD7DA ;
+            font-size: x-large;
+        }
+    }
+    
+    
+
+    .card-body{
+        margin: auto;
+    }
+
+    .card{
+        background-color: #2C3440;
+        color: #CCD7DA;
+    }
+
+    hr{
+        height: 2px;
+        background:#2C3440;
+    }
+
+    a{
+        text-decoration: none !important;
+    }
+    
+
+    // footer
+
+    footer {
+        margin: 0 auto;
+        padding: 40px 70px;
+        background-color: #2C3440;
+        color: #dadada;
+        text-align: center;
+
+        h2{
+            text-decoration: underline;
+        }
+        i {
+          padding: 10px 10px;
+          font-size: 30px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

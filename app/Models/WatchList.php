@@ -5,16 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Film extends Model
+class WatchList extends Model
 {
     use HasFactory;
-
-    public function comments()
+    public function film()
     {
-        return $this->hasMany("App\Models\Comment")->get();
-
+        return $this->belongsTo("App\Models\Film")->first();
     }
-
-   
-
 }

@@ -1,0 +1,81 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+}
+
+body nav .nav-link {
+  color: #2C3440;
+  font-size: 20px;
+}
+
+body h1 {
+  color: #2C3440;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+body #btn {
+  background-color: #2C3440;
+  color: #CCD7DA;
+}
+
+body #more a {
+  float: right;
+}
+
+body #more h4 {
+  color: #2C3440;
+}
+
+body #more hr {
+  height: 2px;
+  background: #2C3440;
+}
+
+body .container .card-body {
+  margin: auto;
+}
+
+body .container .card {
+  background-color: #2C3440;
+  color: #CCD7DA;
+}
+
+body .container hr {
+  height: 2px;
+  background: #2C3440;
+}
+
+body .container a {
+  text-decoration: none;
+}
+
+body footer {
+  margin: 0 auto;
+  padding: 40px 70px;
+  background-color: #2C3440;
+  color: #dadada;
+  text-align: center;
+}
+
+body footer h2 {
+  text-decoration: underline;
+}
+
+body footer i {
+  padding: 10px 10px;
+  font-size: 30px;
+}
+/*# sourceMappingURL=watch_list.css.map */
