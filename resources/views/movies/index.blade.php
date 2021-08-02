@@ -29,10 +29,12 @@
                     </div>
 
                 </a>
-
-                <div class="col ">
-                    <a href="{{route('film.edit',$film->id)}}"><button class="btn btn-outline-info m-auto">edit</button></a> <form action="{{route('film.delete',$film->id)}}" method="POST"> @csrf @method('DELETE')<button class="btn btn-outline-danger m-auto">Delete</button></form> <a href="{{route('film.show',$film->id)}}"><button class="btn btn-outline-dark m-auto">show</button></a>
+                <div class="row display-flex flex-deriction-column justify-content-center">
+                    <div class="colb  ">
+                        <a href="{{route('film.edit',$film->id)}}"><button class="btn btn-outline-info m-auto">edit</button></a> <form action="{{route('film.delete',$film->id)}}" method="POST"> @csrf @method('DELETE')<button class="btn btn-outline-danger m-auto">Delete</button></form> <a href="{{route('film.show',$film->id)}}"><button class="btn btn-outline-dark m-auto">show</button></a><br>
+                    </div>
                 </div>
+                
 
             </div>       
     

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class Admin
+class IsNotAdmin
 {
     /**
      * Handle an incoming request.
@@ -18,8 +18,9 @@ class Admin
     {
         if(auth()->user()->role ==='admin')
         {
-            return $next($request);
+            return redirect('/film');
         }
-        return redirect('home');
+        return $next($request);
+       
     }
 }

@@ -40,7 +40,7 @@ class FilmController extends Controller
         $film->title = $request->title;
         $film->image = $request->image;
         $film->save();
-        return redirect()->back();
+        return redirect('film');
     }
 
     /**
@@ -78,7 +78,7 @@ class FilmController extends Controller
     {
         $film=Film::findOrFail($id);
         $film->title=$request->title;
-        $film->title = $request->image;
+        $film->image = $request->image;
         $film->save();
         return redirect()->route('film.index');
     }
