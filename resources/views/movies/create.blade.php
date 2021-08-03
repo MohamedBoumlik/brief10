@@ -13,6 +13,17 @@
             </div>
 
             <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" name="type" required>
+                    <option selected>Select The Type</option>
+
+                    @foreach ($types as $genre)
+                        <option value="{{$genre->id}}">{{$genre->type}}</option>
+                    @endforeach
+                    
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="formFile" class="form-label">Poster</label>
                 <input class="form-control" type="file" id="formFile" name="image" required>
             </div>

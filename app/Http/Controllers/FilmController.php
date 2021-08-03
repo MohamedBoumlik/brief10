@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Film;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class FilmController extends Controller
@@ -25,7 +26,8 @@ class FilmController extends Controller
      */
     public function create()
     {
-        return view('movies.create');
+        $types = Category::all();
+        return view('movies.create',compact('types'));
     }
 
     /**
@@ -39,6 +41,7 @@ class FilmController extends Controller
         $film = new Film;
         $film->title = $request->title;
         $film->image = $request->image;
+        $film->category_id = $request->type;
         $film->save();
         return redirect('film');
     }
@@ -64,7 +67,8 @@ class FilmController extends Controller
     public function edit($id)
     {
         $film=Film::findOrFail($id);
-        return view('movies.edit',compact('film'));
+        $types = Category::all();
+        return view('movies.edit',compact('film','types'));
     }
 
     /**
@@ -79,6 +83,8 @@ class FilmController extends Controller
         $film=Film::findOrFail($id);
         $film->title=$request->title;
         $film->image = $request->image;
+        $film->category_id = $request->type;
+
         $film->save();
         return redirect()->route('film.index');
     }

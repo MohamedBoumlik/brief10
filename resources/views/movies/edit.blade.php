@@ -14,11 +14,23 @@
             </div>
 
             <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type" required>
+                    <option selected>Select The Type</option>
+
+                    @foreach ($types as $genre)
+                        <option value="{{$genre->id}}">{{$genre->type}}</option>
+                    @endforeach
+                    
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="formFile" class="form-label">Poster</label>
                 <input class="form-control" type="file" id="formFile" name="image" value="{{$film->image}}">
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-outline-dark btn-lg ">Add</button>
+                <button type="submit" class="btn btn-outline-dark btn-lg ">Edit</button>
             </div>
         </form>
 

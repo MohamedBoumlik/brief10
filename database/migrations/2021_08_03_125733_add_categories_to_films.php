@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFilmsTable extends Migration
+class AddCategoriesToFilms extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateFilmsTable extends Migration
      */
     public function up()
     {
-        Schema::create('films', function (Blueprint $table) {
-            $table->id();
-            $table->string("title");
-            $table->string("image");
-            $table->timestamps();
+        Schema::table('films', function (Blueprint $table) {
+
+            $table->foreignId('category_id')->default(1)->constrained()->onDelete("cascade");
+            
         });
     }
 
@@ -28,6 +27,8 @@ class CreateFilmsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('films');
+        Schema::table('films', function (Blueprint $table) {
+            //
+        });
     }
 }

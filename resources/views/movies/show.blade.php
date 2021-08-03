@@ -9,7 +9,7 @@
             <div class="card m-auto" style="width: 13rem;">
                                 
                 
-                <img src="/../img/{{$film->image}}" alt="..." class="card-img-top">
+                <img src="/../img/{{$film->image}}" alt="..." class="card-img-top" style="height: 20rem">
                 <div class="card-body">
                     <p class="card-text">{{$film->title}}</p>
                 </div>
@@ -19,6 +19,8 @@
 
 
         </div>
+
+        {{-- adding comment --}}
 
         <div class="form">
             <form action="{{route ('comment.store')}}" method="POST">

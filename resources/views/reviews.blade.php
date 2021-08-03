@@ -12,7 +12,7 @@
 
                 <div class="card m-auto" style="width: 13rem;">
                     
-                    <img src="/../img/{{$film->image}}" class="card-img-top" alt="...">
+                    <img src="/../img/{{$film->image}}" class="card-img-top" alt="..." style="height: 20rem">
                     <div class="card-body">
                         <p class="card-text">{{$film->title}}</p>
                     </div>

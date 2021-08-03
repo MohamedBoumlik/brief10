@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 use App\Models\Film;
 class HomeController extends Controller
 {
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $films = Film::all();  
-        return view('home',compact('films'));
+        $categories = Category::all();  
+        $new = Film::orderBy('created_at','desc')->take(7)->get();
+        return view('home',compact('categories','new')); 
     }
 }

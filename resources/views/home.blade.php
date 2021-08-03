@@ -25,17 +25,46 @@
         </div>
     </div>
 
-    <h2 class="text-center" id="h">Welcome Back To Our Site</h2>
+    <h2 class="text-center" id="h">Welcome Back To Our Site</h2><br>
 
     <!--------------------------------------- New Movies --------------------------------------->
+<div class="container">
 
-    <div class="container" id="new">
-        <h4>New Movies</h4>
+    <div class="row" id="slide">
+
+        @foreach ($new as $mv)
+            
+
+            <div class="col">
+                
+                <a href="{{route('film.show',$mv->id)}}">
+
+                    <div class="card" style="width: 13rem;">
+                        
+                        <img src="/../img/{{$mv->image}}" class="card-img-top" alt="..." style="height: 20rem">
+                        <div class="card-body">
+                            <p class="card-text">{{$mv->title}}</p>
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>       
+    
+        @endforeach
+
+    </div><br>
+
+    <!--------------------------------------- Action Movies --------------------------------------->
+
+    @foreach ($categories as $category)
+        <h4>{{$category->type}} Movies</h4>
         <hr>
         
-        <div class="row">
+        <div class="row" id="slide">
 
-            @foreach ($films as $film)
+            @foreach ($category->movies() as $film)
                 
 
                 <div class="col">
@@ -44,7 +73,7 @@
 
                         <div class="card" style="width: 13rem;">
                             
-                            <img src="/../img/{{$film->image}}" class="card-img-top" alt="...">
+                            <img src="/../img/{{$film->image}}" class="card-img-top" alt="..." style="height: 20rem">
                             <div class="card-body">
                                 <p class="card-text">{{$film->title}}</p>
                             </div>
@@ -57,7 +86,10 @@
         
             @endforeach
 
-        </div>
+        </div><br>
+    @endforeach
+
+</div>    
 
 @endsection
 
