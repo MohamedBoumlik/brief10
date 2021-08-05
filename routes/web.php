@@ -23,19 +23,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/contact', "App\Http\Controllers\ContactController@index")->name('contact');
 
-Route::get('/film/create',"App\Http\Controllers\FilmController@create")->name('film.create')->middleware('Admin');
+Route::resource("film","App\Http\Controllers\FilmController")->middleware('Admin');
 
-Route::post('film/store',"App\Http\Controllers\FilmController@store")->name('film.store')->middleware('Admin');
+// Route::get('/film/create',"App\Http\Controllers\FilmController@create")->name('film.create')->middleware('Admin');
 
-Route::get('/film',"App\Http\Controllers\FilmController@index")->name('film.index')->middleware('Admin');
+// Route::post('film/store',"App\Http\Controllers\FilmController@store")->name('film.store')->middleware('Admin');
 
-Route::get('/film/{id}/edit',"App\Http\Controllers\FilmController@edit")->name('film.edit')->middleware('Admin');
+// Route::get('/film',"App\Http\Controllers\FilmController@index")->name('film.index')->middleware('Admin');
 
-Route::put('/film/{id}/update',"App\Http\Controllers\FilmController@update")->name('film.update')->middleware('Admin');
+// Route::get('/film/{id}/edit',"App\Http\Controllers\FilmController@edit")->name('film.edit')->middleware('Admin');
 
-Route::delete('/film/{id}/delete',"App\Http\Controllers\FilmController@destroy")->name('film.delete')->middleware('Admin');
+// Route::put('/film/{id}/update',"App\Http\Controllers\FilmController@update")->name('film.update')->middleware('Admin');
 
-Route::get('/film/{id}/show',"App\Http\Controllers\FilmController@show")->name('film.show');
+// Route::delete('/film/{id}/delete',"App\Http\Controllers\FilmController@destroy")->name('film.destroy')->middleware('Admin');
+
+// Route::get('/film/{id}/show',"App\Http\Controllers\FilmController@show")->name('film.show');
 
 Route::post('/comment/store',"App\Http\Controllers\CommentController@store")->name('comment.store');
 

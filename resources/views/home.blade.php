@@ -29,7 +29,8 @@
 
     <!--------------------------------------- New Movies --------------------------------------->
 <div class="container">
-
+    <h4>New Movies</h4>
+        <hr>
     <div class="row" id="slide">
 
         @foreach ($new as $mv)

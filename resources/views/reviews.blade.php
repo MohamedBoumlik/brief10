@@ -24,7 +24,7 @@
             {{-- table --}}
 
             <div id="table">
-                <table class="table table-hover">
+                <table class="table table-hover table-bordered">
                     <tr>
                         <th>User</th>
                         <th>Comment</th>
