@@ -20,5 +20,4 @@ class Film extends Model
         return $this->belongTo("App\Models\Categorie")->first();
 
     }
-
 }

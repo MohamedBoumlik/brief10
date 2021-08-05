@@ -14,8 +14,9 @@ class WatchListController extends Controller
      */
     public function index()
     {
-        $lists =  WatchList:: all();
-        return view('lists.index', compact('lists'));
+        // $lists =  WatchList:: all();
+        $user=auth()->user();
+        return view('watch_list.index',["user"=>$user]);
     }
 
 
@@ -27,7 +28,11 @@ class WatchListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // echo "hey"
+        $user=auth()->user();
+        $user->films()->attach($request->film_id);
+        
+        return back();
     }
 
     /**
@@ -36,22 +41,7 @@ class WatchListController extends Controller
      * @param  \App\Models\WatchList  $watchList
      * @return \Illuminate\Http\Response
      */
-    public function show(WatchList $watchList)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\WatchList  $watchList
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(WatchList $watchList)
-    {
-        //
-    }
-
+  
     /**
      * Update the specified resource in storage.
      *
@@ -59,19 +49,16 @@ class WatchListController extends Controller
      * @param  \App\Models\WatchList  $watchList
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WatchList $watchList)
-    {
-        //
-    }
-
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\WatchList  $watchList
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WatchList $watchList)
+    public function destroy($id)
     {
-        //
+        $user=auth()->user();
+        $user->films()->detach($id);
+        return back();
     }
 }

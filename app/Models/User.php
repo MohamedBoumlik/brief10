@@ -11,9 +11,9 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    public function lists()
+    public function films()
     {
-        return $this->belongsToMany("App\Models\WatchList");
+        return $this->belongsToMany("App\Models\Film");
     }
     /**
      * The attributes that are mass assignable.

@@ -41,7 +41,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="watch_list.html">Watch List</a>
+                            <a class="nav-link" href="{{route('lists.index')}}">Watch List</a>
                         </li>
                         
                         <li class="nav-item">

@@ -26,6 +26,7 @@ class HomeController extends Controller
     {
         $categories = Category::all();  
         $new = Film::orderBy('created_at','desc')->take(7)->get();
-        return view('home',compact('categories','new')); 
+        $watchlist=auth()->user()->films();
+        return view('home',compact('categories','new',"watchlist")); 
     }
 }
