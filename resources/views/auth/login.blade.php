@@ -11,6 +11,12 @@
                     <form method="POST" action="{{ route('login') }}" >
                         @csrf
 
+                        <div class="form-group row ">
+                            <div class="col-md-12 text-center">
+                                <img src="/../img/ToWatch2.png" style="height: 150px">
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -62,6 +68,8 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                <a href="{{route('register')}}">Register</a>
                             </div>
                         </div>
                     </form>

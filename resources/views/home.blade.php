@@ -28,8 +28,8 @@
     <h2 class="text-center" id="h">Welcome Back To Our Site</h2><br>
 
     <!--------------------------------------- New Movies --------------------------------------->
-    <div class="container">
-        <h4>New Movies</h4>
+    <div class="container" >
+        <h4 id="new">New Movies</h4>
         <hr>
         <div class="row" id="slide">
 
@@ -70,19 +70,18 @@
 
                     <div class="col">
 
-                        <a>
+                        <a href="{{ route('film.show', $film->id) }}">
 
                             <div class="card" style="width: 13rem;">
 
-                                <img src="/../img/{{ $film->image }}" class="card-img-top" alt="..."
-                                    style="height: 20rem">
+                                <img src="/../img/{{ $film->image }}" class="card-img-top" alt="..."style="height: 20rem">
                                 <div class="card-body">
-                                    <p class="card-text">{{ $film->title }}</p>
+                                    <p class="card-text text-center">{{ $film->title }}</p>
                                     @if (!in_array($film->id,$watchlist->pluck("film_id")->toArray()))
                                         <form action="{{ route('watchlist.store') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="film_id" value="{{ $film->id }}" />
-                                            <button type="submit">Add to watch list</button>
+                                            <button class="btn btn-outline-light " type="submit">Add to watch list</button>
                                         </form>
                                     @endif
 

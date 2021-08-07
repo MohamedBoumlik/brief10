@@ -48,7 +48,7 @@
 
 
         <div id="table">
-            <table class="table  table-hover">
+            <table class="table table-hover table-bordered">
                 <tr>
                     <th>User</th>
                     <th>Comment</th>
@@ -58,7 +58,18 @@
                             
                 <tr>
                     <td>{{$comment->user()->name}}</td>
-                    <td>{{$comment->text}}</td>
+                    <td>{{$comment->text}} 
+                        @if (auth()->user()->role ==='admin')
+                            
+                            <form action="{{route('comment.destroy',$comment->id)}}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-outline-danger">Delete</button>
+                            </form>
+
+                        @endif
+                    
+                    </td>
                 </tr>
 
                 @endforeach

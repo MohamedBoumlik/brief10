@@ -36,20 +36,6 @@ class WatchListController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\WatchList  $watchList
-     * @return \Illuminate\Http\Response
-     */
-  
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\WatchList  $watchList
-     * @return \Illuminate\Http\Response
-     */
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\WatchList  $watchList

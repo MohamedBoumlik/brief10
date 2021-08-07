@@ -6177,11 +6177,11 @@ button.bg-light:focus {
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #1d2124 !important;
+  background-color: #187cc9 !important;
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #CCD7DA !important;
 }
 
 .bg-transparent {
@@ -7741,10 +7741,10 @@ button.bg-dark:focus {
   padding: 1.5rem !important;
 }
 
-.pt-4,
+/* .pt-4,
 .py-4 {
   padding-top: 1.5rem !important;
-}
+} */
 
 .pr-4,
 .px-4 {

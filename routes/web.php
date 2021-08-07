@@ -41,6 +41,8 @@ Route::get('/film/{id}/show',"App\Http\Controllers\FilmController@show")->name('
 
 Route::post('/comment/store',"App\Http\Controllers\CommentController@store")->name('comment.store');
 
+Route::delete('/comment/{id}/delete',"App\Http\Controllers\CommentController@destroy")->name('comment.destroy')->middleware('Admin');
+
 Route::get('/watchList',"App\Http\Controllers\WatchListController@index")->name('lists.index');
 
 Route::get('/reviews',"App\Http\Controllers\ReviewsController@index")->name('reviews');
