@@ -27,7 +27,7 @@
                 @csrf
                 @method('post')
                 <div class="mb-3">
-                    <label for="floatingTextarea2">Message :</label>
+                    <label for="floatingTextarea2">Comment :</label>
                     <textarea class="form-control" id="floatingTextarea2" style="height: 100px" name="comment"></textarea>
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                     <input type="hidden" name="film_id" value="{{$film->id}}">

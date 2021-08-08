@@ -13,7 +13,8 @@
             </div>
 
             <div class="mb-3">
-                <select class="form-select" aria-label="Default select example" name="type" required>
+                <label for="select" class="form-label">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type" required id="select">
                     <option selected>Select The Type</option>
 
                     @foreach ($types as $genre)
