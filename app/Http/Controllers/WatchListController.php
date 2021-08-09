@@ -45,6 +45,6 @@ class WatchListController extends Controller
     {
         $user=auth()->user();
         $user->films()->detach($id);
-        return back();
+        return back()->with("dltfilm","Deleted Successfully");
     }
 }

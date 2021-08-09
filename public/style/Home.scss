@@ -77,19 +77,17 @@ body{
     #table{
         width: 90%;
         margin-left: 5%;
-        background-color:#2C3440 ;
         
-
         td{
             vertical-align: middle;
             text-align: center;
-            color:#CCD7DA ;
+            color:#2C3440 ;
         }
 
         th{
             vertical-align: middle;
             text-align: center; 
-            color:#CCD7DA ;
+            color:#2C3440 ;
             font-size: x-large;
         }
     }
@@ -132,6 +130,13 @@ body{
     #slide::-webkit-scrollbar{
         display: none;
     }
+
+    #row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     // footer
 
     footer {

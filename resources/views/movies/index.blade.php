@@ -8,7 +8,19 @@
     @endforeach
 </div> --}}
 
+
 <div class="container">
+    @if (session("addflm"))
+        <div class="alert alert-success">{{session("addflm")}}</div>
+    @endif
+    
+    @if (session('editflm'))
+        <div class="alert alert-success">{{session("editflm")}}</div>
+    @endif
+    
+    @if (session("dltfilm"))
+        <div class="alert alert-danger">{{session("dltfilm")}}</div>
+    @endif
 
     <div class="row m-auto">
 
@@ -30,8 +42,8 @@
 
                 </a>
                 <div class="row display-flex flex-deriction-column justify-content-center">
-                    <div class="colb  ">
-                        <a href="{{route('film.edit',$film->id)}}"><button class="btn btn-outline-info m-auto">edit</button></a> <form action="{{route('film.destroy',$film->id)}}" method="POST"> @csrf @method('DELETE')<button class="btn btn-outline-danger m-auto">Delete</button></form> <a href="{{route('film.show',$film->id)}}"><button class="btn btn-outline-dark m-auto">show</button></a><br>
+                    <div class="colb d-flex m-3">
+                        <a href="{{route('film.edit',$film->id)}}" class="btn btn-outline-info m-2">Edit</a> <form action="{{route('film.destroy',$film->id)}}" method="POST"> @csrf @method('DELETE')<button class="btn btn-outline-danger m-2">Delete</button></form> <a href="{{route('film.show',$film->id)}}" class="btn btn-outline-dark m-2">Show</a><br>
                     </div>
                 </div>
                 
@@ -39,8 +51,11 @@
             </div>       
     
         @endforeach
-
     </div>
+
+</div>
+<div class="d-flex justify-content-center">
+    <span class="mt-4">{{$films->links("pagination::bootstrap-4")}}</span>
 </div>
 
 @endsection

@@ -15,7 +15,7 @@ class FilmController extends Controller
      */
     public function index()
     {
-        $films = Film::all();  
+        $films = Film::paginate(8);  
         return view('movies.index',compact('films'));
     }
 
@@ -43,7 +43,7 @@ class FilmController extends Controller
         $film->image = $request->image;
         $film->category_id = $request->type;
         $film->save();
-        return redirect('film');
+        return redirect('film')->with('addflm','Film Added Successfully');
     }
 
     /**
@@ -86,7 +86,7 @@ class FilmController extends Controller
         $film->category_id = $request->type;
 
         $film->save();
-        return redirect()->route('film.index');
+        return redirect()->route('film.index')->with("editflm","Updated Successfully");
     }
 
     /**
@@ -99,6 +99,6 @@ class FilmController extends Controller
     {
         $film=Film::findOrFail($id);
         Film::destroy($id);
-        return redirect()->route('film.index');
+        return redirect()->back()->with("dltfilm","Film Deleted");
     }
 }

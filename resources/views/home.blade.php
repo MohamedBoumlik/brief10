@@ -77,6 +77,9 @@
                                 <img src="/../img/{{ $film->image }}" class="card-img-top" alt="..."style="height: 20rem">
                                 <div class="card-body">
                                     <p class="card-text text-center">{{ $film->title }}</p>
+
+                                    {{-- in_array(value, array) --}}
+                                    {{-- if film_id not in array [watchlist]--}}
                                     @if (!in_array($film->id,$watchlist->pluck("film_id")->toArray()))
                                         <form action="{{ route('watchlist.store') }}" method="POST">
                                             @csrf

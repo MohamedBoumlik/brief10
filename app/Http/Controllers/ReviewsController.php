@@ -14,7 +14,7 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        $films = Film::all();
+        $films = Film::paginate(4);
         return view('reviews', compact('films'));
         
     }

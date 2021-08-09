@@ -11,6 +11,10 @@
    
     <div class="container">
 
+        @if (session("dltfilm"))
+            <div class="alert alert-danger">{{session("dltfilm")}}</div>
+        @endif
+
         <div class="row">
 
             @foreach ($user->films as $film)
